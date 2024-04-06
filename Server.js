@@ -1,5 +1,4 @@
 const http = require("http");
-const { Socket } = require("net");
 const fs = require("fs");
 const configPath = "./config.json";
 const configData = JSON.parse(fs.readFileSync(configPath, "utf8"));
