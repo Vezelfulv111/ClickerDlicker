@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 
 const postData = async () => {
-    const data = "Argentina:1";
+    const data = "Albania:1";
 
     const response = await fetch('http://localhost:8004', {
         method: 'POST',

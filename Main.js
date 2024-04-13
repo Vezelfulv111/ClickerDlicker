@@ -6,5 +6,5 @@ const configPath = "./server.json";
 const server = new Server(configPath);
 server.init();
 
-const database = new Database(configPath);
+const database = new Database(configPath, server);
 database.init();

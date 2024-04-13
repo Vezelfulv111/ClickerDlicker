@@ -9,7 +9,11 @@ class Server {
         this.port = conf.server.port;
     }
 
-    #initCoutries() {
+    countyMap() {
+        return this.#countryMap;
+    }
+
+    initCoutries() {
         const data = fs.readFileSync('country_list.txt', 'utf8');
         const countries = data.trim().split('\n');
 
@@ -20,12 +24,12 @@ class Server {
     }
 
     init() {
-    this.#initCoutries();
+    this.initCoutries();
     const instance = http.createServer((req, res) => {
      if (req.method === 'POST') {
          let body = '';
 
-         // Handling incoming POST data
+         // Handling incoming POST data - query type : coutry_name:Click_count
          req.on('data', chunk => {
              body += chunk.toString(); // Convert buffer to string
              const parts = body.split(':');
