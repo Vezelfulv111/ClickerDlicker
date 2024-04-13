@@ -1,0 +1,13 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 8004
+  },
+  "db": {
+    "user": "slava",
+    "host": "localhost",
+    "database": "country_clicks",
+    "password": "great",
+    "port": 5432
+  }
+}
