@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: slava
+      POSTGRES_PASSWORD: great
+      POSTGRES_DB: country_clicks
+    volumes:
+      - db_data:/var/lib/posgresql/data
+
+volumes:
+  db_data:
