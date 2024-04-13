@@ -1,7 +1,9 @@
-const postData = async () => {
-    const data = "Hello, World";
+import fetch from "node-fetch";
 
-    const response = await fetch('http://localhost:8003', {
+const postData = async () => {
+    const data = "Argentina:1";
+
+    const response = await fetch('http://localhost:8004', {
         method: 'POST',
         headers: {
             'Content-Type': 'text/plain'
